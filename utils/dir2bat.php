@@ -17,7 +17,7 @@ class dir2bat {
                 $droped_folders_num++;
             }
             if(!strlen($txt_ar[$i])) continue;
-            $txt_ar[$i]=preg_replace('/^\d{2}\.\d{2}\.\d{4}\s*\d{2}:\d{2}\s*[\wа-я]+\s*/i','',$txt_ar[$i]);
+            $txt_ar[$i]=eregi_replace('/^\d{2}\.\d{2}\.\d{4}\s*\d{2}:\d{2}\s*[\wа-я]+\s*/i','',$txt_ar[$i]);
             echo 'fsutil file createnew '.
             $txt_ar[$i].
                 ' 1'.
