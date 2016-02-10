@@ -32,5 +32,5 @@
 <? include 'inc/index/dialogs.php'?>
 
 
-<script src="js/index.min.js"></script>
+<script src="js/index.js"></script>
 <? include 'inc/footer.php'?>
