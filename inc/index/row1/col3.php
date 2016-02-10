@@ -6,4 +6,5 @@
 <h2>Утилиты</h2>
 <ul>
     <li><a href="#" onclick="index_page.util_dir2bat_init()">Конвертер вывода dir в bat</a> </li>
+    <li><a target="_blank" href="http://10.10.14.16/files/ugs_composite.exe">composite.exe</a> </li>
 </ul>
