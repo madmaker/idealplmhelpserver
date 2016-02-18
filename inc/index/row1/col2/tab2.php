@@ -14,10 +14,15 @@
             <div id="help_collapse_nx10" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="help_collapse_nx10_heading">
                 <div class="panel-body">
                     <ul>
-                        <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/nx/10/nx_help/">Help English</a></li>
-                        <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/nx/10/nx_api/">NX API English</a></li>
-                        <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/nx/10/release_notes/">NX 10 Release notes</a></li>
-                        <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/nx/10/whatsnew/">NX 10 Whats New</a></li>
+                        <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/nx/10/nx_help_en/">Help English</a></li>
+                        <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/nx/10/nx_api_en/">NX API English</a></li>
+                        <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/nx/10/release_notes_en/">NX 10 Release notes Eng</a></li>
+                        <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/nx/10/whatsnew_en/">NX 10 Whats New Eng</a></li>
+
+                        <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/nx/10/nx_help/">Help Ru</a></li>
+                        <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/nx/10/nx_api/">NX API Ru</a></li>
+                        <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/nx/10/release_notes/">NX 10 Release notes Ru</a></li>
+                        <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/nx/10/whatsnew/">NX 10 Whats New Ru</a></li>
                     </ul>
                 </div>
             </div>
