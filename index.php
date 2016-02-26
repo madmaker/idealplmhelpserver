@@ -1,6 +1,9 @@
 <? include 'inc/header.php'?>
 <div class="container" style="margin-top: 100px;">
     <div class="row">
+        <p><b>Твой IP:</b> <?=$_SERVER['REMOTE_ADDR']?></p>
+    </div>
+    <div class="row">
         <?include 'inc/index/row1.php'?>
     </div>
 
