@@ -1,4 +1,4 @@
-index_page=new Object()
+index_page={};
 index_page.filter=function() {
     var rex = new RegExp(jQuery('#index_page_phones_list_filter').val(), 'i');
     jQuery('#index_page_phones_list tr').hide();
