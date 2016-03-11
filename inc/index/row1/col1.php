@@ -1,5 +1,6 @@
 <h2 id="internal_links">Внутренние ресурсы</h2>
 <ul >
+    <li><a href="http://www.eclipse.org/birt/" target="_blank">Документуха BIRT</a> </li>
     <li><a target="_blank" href="http://10.10.14.16/files/pm_phones.html">Телефонный справочник Силовых</a> </li>
     <li><a target="_blank" href="https://10.10.14.1/bandwidthd/index.html">Таблица интернет-позора</a> </li>
     <li><a target="_blank" href="https://download.industrysoftware.automation.siemens.com/">GTAC File Download</a> </li>
