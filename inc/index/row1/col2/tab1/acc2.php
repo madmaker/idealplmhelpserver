@@ -20,10 +20,15 @@
                 <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/tc/10.1.4/help/">10.1.4 Русская</a></li>
                 <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/tc/10.1.4/PDF/">10.1.4 PDF Русская</a></li>
                 <li class="list-unstyled"><h4>10.1.5 <small>(Поиск на сервере)</small></h4></li>
-                <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/tc/10.1.5/help/">10.1.5 English</a></li>
-                <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/tc/10.1.5/PDF/">10.1.5 PDF English</a></li>
-                <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/tc/10.1.5/tcrefs/">10.1.5 Руководства для разработчиков</a></li>
-                <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/tc/10.1.5/PDF/">10.1.5 PDF English</a></li>
+                <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/tc/10.1.5/help_ru/">10.1.5 Русская</a></li>
+                <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/tc/10.1.5/help_ru/">10.1.5 English</a></li>
+                <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/tc/10.1.5/PDF_ru/">10.1.5 PDF Русская</a></li>
+                <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/tc/10.1.5/PDF_en/">10.1.5 PDF English</a></li>
+                <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/tc/10.1.5/tcrefs_en/">10.1.5 Руководства для разработчиков</a></li>
+                <li class="list-unstyled"><h4>10.1.6 <small>(Поиск на сервере)</small></h4></li>
+                <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/tc/10.1.6/help_en/">10.1.6 English</a></li>
+                <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/tc/10.1.6/PDF_en/">10.1.6 PDF English</a></li>
+                <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/tc/10.1.6/tcrefs_en/">10.1.6 Руководства для разработчиков</a></li>
             </ul>
             <hr>
             <ul>

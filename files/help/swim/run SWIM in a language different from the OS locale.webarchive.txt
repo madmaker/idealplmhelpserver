@@ -1,0 +1,13 @@
+Both integrations are sensitive to the OS locale, so that if you switch from one locale to another, the integrations' dialogs will display the correct localized text.
+ 
+At times you may want to force the integration to use a language that is different from the OS.  For example, if the OS is set to "German (Germany"), but you want the integration dialogs to display in English.
+ 
+This is easily done by editing the ipemrunnersoa.bat file (for iPEM) or the swimrunner.bat file (for SWIM), and adding a line like this at the end of the section where the %ARGS% variable is set:
+ 
+set ARGS=%ARGS% -Duser.language=en -Duser.country=US
+ 
+If you want to force the integration's GUI to Chinese, use this:
+ 
+set ARGS=%ARGS% -Duser.language=zh -Duser.country=CN
+ 
+and so on .  . 

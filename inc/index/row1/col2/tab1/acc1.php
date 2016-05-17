@@ -10,6 +10,13 @@
         <div class="panel-body">
             <p class="text-muted">(Начиная с этой версии поиск по справке осуществляется на сервере - без Java в браузере)</p>
             <ul>
+                <li class="list-unstyled"><h4>10.2.1</h4></li>
+                <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/tc/11.2.1/help_ru/">Русская</a></li>
+                <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/tc/11.2.1/help_en/">English</a></li>
+                <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/tc/11.2.1/tcrefs_en/">Руководства для разработчиков</a></li>
+                <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/tc/11.2.1/PDF_ru/">PDF Русская</a></li>
+                <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/tc/11.2.1/PDF_en/">PDF English</a></li>
+                <li class="list-unstyled"><h4>10.2</h4></li>
                 <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/tc/11.2/help_ru/">Русская</a></li>
                 <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/tc/11.2/help/">English</a></li>
                 <li><a target="_blank" href="http://10.10.14.16:8181/tdoc/tc/11.2/tcrefs/">Руководства для разработчиков</a></li>

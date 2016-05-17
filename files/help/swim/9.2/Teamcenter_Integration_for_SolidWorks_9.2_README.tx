@@ -1,0 +1,285 @@
+====================================================================
+Teamcenter Integration for SolidWorks 9.2.0 README
+====================================================================
+Teamcenter
+Integration for SolidWorks
+9.2.0
+
+====================================================================
+LICENSE AND COPYRIGHT
+====================================================================
+©2013 Siemens Product Lifecycle Management Software Inc. All Rights
+Reserved.
+
+====================================================================
+INTRODUCTION
+====================================================================
+Please review the Installation Guide, available after unzipping the
+distribution, for software pre-requisites.
+
+Teamcenter Integration for SolidWorks Version 9.2.0
+
+Please review the Installation Guide, available after unzipping the
+distribution, for software pre-requisites.
+
+The Teamcenter Integration for SolidWorks works with Teamcenter
+Teamcenter Unified Tc8.3.0, Tc9.1.0 and later
+versions of each.
+
+The Integration supports Solidworks 2011 2012 and 2013.  Both
+32-bit and 64-bit versions are supported.
+
+The Integration's minimum required  SolidWorks service packs are the following:
+   2011 SP0
+   2012 SP0
+   2013 SP1
+
+Please note that if upgrading from Teamcenter Engineering to Teamcenter
+Unified (TcU 2007.1, Tc8, Tc8.1, Tc8.3), then version 7.0.0 or 7.1.0 of the Teamcenter
+Integration for SolidWorks must be installed on the Teamcenter Engineering
+database prior to the upgrade. This will ensure that the proper Integration data
+types are defined prior to the upgrade.
+
+Supported platform information is available on GTAC by searching the
+Certification Database in the Online Library at:
+http://support.ugs.com/online_library/certification/
+
+====================================================================
+INSTALLATION AND RELEASE NOTES
+====================================================================
+Complete installation instructions and release notes are available
+on the GTAC Documentation website in the following manuals:
+
+Teamcenter Integration for SolidWorks Installation Guide Version 9.2.0
+Teamcenter Integration for SolidWorks User Guide Version 9.2.0
+Teamcenter Integration for SolidWorks Release Notes
+
+ENHANCEMENTS IN VERSION 9.2.0
+ * Significant changes have been made to the update model operation.  In version
+   9.2.0 of the integration the update of models is based on revision rule.
+   The change makes it easier to work on large stuctures opened with specific
+   revision rules.  For more information see the AdminGuide.pdf.
+
+ * (ER6769055) Lightweight models are now displayed in the Teamcenter task pane within
+   SolidWorks.  Most right mouse button (RMB) operations are supported for the
+   lightweight models, including update model.  Attributes cannot be updated
+   for lightweight models nor can they be saved.  They will not appear in the
+   save dialog.
+
+ * The 9.2.0 version of the integration now supports SolidWorks 2013.  It is
+   recommended to use SP2.0 for the best performance. Support for SolidWorks
+   2010 has been deprecated.
+
+ * The SWIM 9.2.0 version of the integration added sw.configurations.keep
+   preference for improved management of configuration.  Patterns can be defined
+   to control the configurations to be managed in Teamcenter.  The preference
+   is a counter-part to sw.configurations.hide.
+
+ * SWIM 9.2.0 version of the integration has changed the default attribute
+   mappings in the swim.xml.  The old mapping of model description to Item
+   description has been removed.  Instead model description is now mapped
+   to Item Name and Item Revision Name with Item Revision name being
+   bi-directional.  The new mappings better align to Teamcenter use of Item
+   Name.  Additionally revision is mapped back to the SolidWorks model to
+   enable designers to know the revision directly within the cad file.  While
+   making this improvement, Description was removed from the Create New dialog.  For
+   sites that use the OOTB attribute mapping for Item Name, the description will
+   be populated from the mapping.
+
+ * (ER1861806) SWIM configuration in Multi-Site environment.  With earlier
+   versions of the integration it was challenging for sites to transfer all
+   configurations of a document from one site to another because the transfer
+   of ownership could not identify the configurations.  The SWIM 9.2.0
+   version of the integration creates SW2_configuration relationships when a
+   document and configuration are both saved to Teamcenter.  The relationship
+   goes from the master documents dataset to the Item Revision of the
+   configuration.  By configuring the new SW2_configuration and
+   SWIM_master_dependency relationship into the Teamcenter transfer of ownership
+   the complete ownership of document and all configurations can be transferred.
+   Sites with existing data can upgrade their data by running the upgrade utility.
+   See the AdminGuide.pdf.
+
+ * (ER1895825) Non SolidWorks files (saved as auxiliary files) are not deleted
+   from work folder.  The SWIM 9.2.0 version of the integration removes all
+   auxiliary files once the save operation is complete.
+
+ * (ER6733696) sw.configurations.default=none: the Add Configurations button
+   should be removed.  A new preference sw.configurations.addbutton can be
+   configured to remove the add button from save and open dialogs.  Review
+   swim.properties documentation for details.
+
+ * (ER6567269) SWIM 8.2.2 - Advanced Search panel - remove default "search"
+   panel.  The advanced search dialog in the SWIM 9.2.0 version of the
+   integration only contains the Teamcenter searches.  The general searches
+   were removed and are now supported through a dropdown on the open dialog.
+   The drop down contains Item, Item Name, Dataset, and Dataset Type searches.
+
+ * (ER6569525) - SWIM 8.2.2 - Teamcenter/Advanced Searches do not come in
+   specified order.  SWIM 9.2.0 version of the integration orders the advanced
+   searched by the order specified in iman.querries.allowed preference.  Learn
+   more by reading swim.properties.
+
+ * iman.autorevise.configurations default has been changed from never to prompt.
+   This was done to ensure user is given a choice on how to revise
+   configurations.
+
+ * Installations on Teamcenter 9.1 or later can obtain minor performance
+   improvements by setting the iman.metacache.enabled preference.  Meta cache
+   is not supported with older versions of Teamcenter so preference should not
+   be enabled.
+
+ * In version 9.2.0 of the integration, the update directory dialog show the
+   full path to the directory being updated.  Earlier versions only displayed
+   the name of the last folder.
+
+ * (ER6800622) - Need different icon to distinguish modification from new model
+   in save dialog.  New models have a Teamcenter modified icon without pencil as
+   do un-modified models being saved to new Item Revisions.  Models that exist
+   in Teamcenter, that have been modified locally show the Teamcenter modified
+   icon (with pencil)
+
+ * (ER6837512) - IPEM - ADS - Unable to change program from IPEM interface.
+   In the 9.2.0 version of the integration, it is now possible to change the
+   Teamcenter project on the user settings dialog.
+
+ * (ER6439033 & ER6798925) - SWIM 8.2 - Need preview funcationality in the Save
+   dialog in SWIM.  In version 9.2.0 a preview flyover is available in the save
+   dialog.  Pause the cursor over any row and the flyover will contain an image
+   of the model.  If a * appears before the model name, then the image does not
+   represent the model in session, instead the image represents the model
+   on disk.
+
+ * The default filters have been changed.  At this time only "required" and
+   "include drawings" appear on initial installation of the 9.2.0 version of
+   the integration.  "Required" is checked by default.  Additionally, when
+   no filter is checked implied drawings (those in the same Item Revision) will
+   be filter out.  These changes were done to make the filtering understandable
+   to first time users.
+
+ * (ER1736404) Delete Files After Save option should cause auxiliary files to
+   be deleted (not just SolidWorks models).  Version 9.2.0 of the integration
+   deletes auxiliary files created during save.
+
+NEW FIXED ISSUES in Version 9.2.0
+ * (PR6765759) Testing patch for PR 6728358 reveals SWIM update in session
+   performance issue.  The performance of updating the models in session has
+   been improved.  Additionally the version 9.2.0 version of the update
+   models command now supports lightweight models
+
+ * (PR1919111) SolidWorks Integration does not import JT-Files.
+   In earlier versions of the integration JT did not always get imported
+   correctly for configurations or documents with non-default configurations.
+   The 9.2.0 version of the integration correctly imports the JT files.
+
+ * (PR1922134) SWIM9.1: If SWIM is started in Non-English language, pb with
+   date attribute.  The date widget on the save dialog did not work in a
+   Non-English environment.  Version 9.2.0 of the integration resolves the
+   problem.
+
+ * (PR6806148) - Documentation fix: Remove references to Pro/ENGINEER in SWIM
+   AdminGuide.pdf.  Pro/ENGINEER references have been removed in the version
+   9.2.0 of the integration AdminGuide.pdf.
+
+ * (PR1922121 & PR6831454) SWIM: Mapping "item_desc" to a SWX custom prop.
+   won't honor "cadtopdm" direction.  Configuration specific properties
+   and evaluated properties on Configuration sometimes mapped to Teamcenter
+   as the document values.  The 9.2.0 version of the integration obtains
+   the correct configuration specific values.
+
+ * (PR1930209) Solid Works Integration: Boolean property always true
+   The integration was not honoring Boolean default value.  The 9.2.0 version
+   of the integration reads the Teamcenter property default and displays
+   it properly in the Save and Create new dialogs.
+
+ * (PR1930704 & PR6853402) SWIM presentations of nested LOV's are disordered
+   when using version 9.1.0 of the integration some cascading LOV's appeared
+   on the Save and Create new dialog incorrectly.  The child LOV's could
+   appear under the wrong parent property.  Version 9.2.0 of the integration
+   corrects the display of cascading LOV's.
+
+ * (PR6848080) Editing Item Rev to new value in Save dialog performs Save
+   action when 'Entered'.  Version 9.2.0 of the save dialog ensures that
+   selecting enter while entering a revision does not initiate a save button
+   click action.  Similar corrections have been made to other fields and on
+   the create new dialog.
+
+ * (PR1927686) SWIM: Losing CO state if an there is an error during save process.
+   Version 9.2.0 of the integration will retain the checkout of models when an
+   attribute error occurs.  Other errors may still result in a lost checkout.
+
+ * (PR6827391) Some item types not available when saving thru swim
+   This only occurred when the display rules were different by group.  Version
+   9.2.0 properly displays the types based on the group specific display rules.
+
+ * (PR2210297) SWIM 9.1 - Not honoring property constant Enabled set to false
+   Version 9.2.0 handles property constant set to false.  The implementation
+   is a workaround for a core Teamcenter issue.  The actual PR has been
+   assigned to core Teamcenter to resolve correctly.
+
+ * (PR1920732) Attribute Mapping with a list of values - only the first value
+   is mapped to SW.  This was not an issue with LOV's, but instead a problem
+   with strings attributes that contained semicolons.  Text after the first
+   semicolon was lost.  Version 9.2.0 of the integration handles the semicolon's
+   correctly.
+
+ * (PR6801866 & PR1918300) - trying to save to teamcenter from swim
+   A java.lang.NullPointerException occurred when Teamcenter option
+   ItemCreation.NoMasterFrom is set or access to master forms is otherwise
+   restricted.  Version 9.2.0 of the integrations avoids the exception and
+   save can be completed by the user.
+
+ * (PR6805073) SWIM 9.1 Bulk Import tool causes attribute mapping to fail
+   The error was specific to SolidWorks evaluated attributes such as:
+   $PRP:"DESCRIPTION1".  Version 9.2.0 of the Bulk import tool handles
+   evaluated attributes.
+
+ * (PR6795039) SWIM 8.3.1 save fails with Custom Basic Units set to
+   "Feet & Inches".  The integration had never been updated to support this
+   custom unit.  Version 9.2.0 of the integration retrieves the units
+   correctly.
+
+ * (PR1916571) SWIM-Plugin causes SolidWorks to crash while using
+   "Broken-Out-Section" command.  The 9.2.0 version of the integration
+   avoids the crash.
+
+ * (PR6757049) SWIM Usage issue
+   When using the Teamcenter task pane to checkin a drawing, the dependent
+   model was not selected for checkin.  However performing the same actions
+   through Teamcenter save operation resulted in both model being selected for
+   save.  With Version 9.2.0 of the integration both operations result in both
+   drawing and child parts being selected for checkin.
+
+ * (PR1903324) After installing SWIM 8.3.1 Sw performnace in daily work features
+   goes slower.  The performance of SolidWorks functionality was caused by
+   notifiers the integration uses to monitor user actions.  The notifiers
+   stored information to improve the performance of integration operations.
+   The version 9.2.0 integration improves performance of SolidWorks operations,
+   but the Teamcenter save will be a bit slower on large datasets.
+
+ * (PR6655756) IMAN_capture relation not honored for PDF upload
+   As installed, the integration was using IMAN_capture relation for PDF files.
+   IMAN_capture relations are not visible to OOTB Teamcenter, so users could
+   not see the PDF files.  Version 9.2.0 of the integration uses IMAN_rendering
+   for PDF files.  Sites already using IMAN_capture can continue to use
+   IMAN_capture or switch to using IMAN_rendering.
+
+ISSUES occurring in Version 9.2.0
+
+====================================================================
+Global Technical Access Center (GTAC)
+====================================================================
+To report any serious problems about this product, please contact
+the Global Technical Access Center.
+
+Phone:
+------
+    - United States and Canada: (800) 955-0000 or (714) 952-5444
+    - Outside the United States and Canada: Contact your local
+      support office.
+
+Website:
+--------
+
+You can also log incident reports on the Web at:
+http://support.ugs.com
+====================================================================

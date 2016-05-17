@@ -1,0 +1,35 @@
+Often problems that are reported by users cannot be easily reproduced, and the necessary TXD log file is lost because each time a new session is started, it is overwritten by the new log.
+ 
+In such cases it is helpful to reconfigure SWIM or iPEM to save versions of the txd log file, so the customer can zip up all the accumulated log files and send them to us for analysis.  To do this:
+ 
+1. In swim.properties or ipem.properties, set the preference "log.file" to a fixed path with a '0' version number, for example:
+ 
+log.file=c:\\temp\\ipemlog.0.txt
+ 
+2. In ipemrunnersoa.bat, or swimrunner.bat, add the following lines anywhere before the java command is called at the bottom (iPEM example shown here):
+ 
+ 
+set TXD_VER=0
+set TXD_LOG_NAME="c:\temp\ipemlog.0.txt"
+if exist %TXD_LOG_NAME% goto generate_log_name (
+) else (
+goto txd_log_end
+)
+:generate_log_name
+set /a TXD_VER=%TXD_VER%+1
+set TXD_BACKUP_LOG_NAME="c:\temp\ipemlog.%TXD_VER%.txt"
+if exist %TXD_BACKUP_LOG_NAME% (
+ goto generate_log_name
+) else (
+ move %TXD_LOG_NAME% %TXD_BACKUP_LOG_NAME%
+ goto txd_log_end
+)
+:txd_log_end
+ 
+With these changes in place, the latest version of the txd log will always be version 0, and the remaining versions will be numbered in order of increasing age:
+ 
+ipemlog.0.txt (newest)
+ipemlog.1.txt (oldest)
+ipemlog.2.txt
+ipemlog.3.txt
+ipemlog.4.txt (second newest)
