@@ -37,7 +37,7 @@
                 <li><a target="_blank" href="https://siemensplmlearningcenter.sabacloud.com/Saba/Web_spf/PRODTNT130/common/learningeventdetail/curra000000000002260">Learning Siemens</a></li>
                 <li><a target="_blank" href="http://ideal-plm.ru/uKnowbase/records">База знаний</a></li>
                 <li><a target="_blank" href="http://ideal-plm.ru/uSupport/requests">Техподдержка</a></li>
-                <li><a target="_blank" href="https://10.10.14.134:9443/vsphere-client/">vSphere</a> </li>
+                <li><a target="_blank" href="https://10.10.14.2:9443/vsphere-client/">vSphere</a> </li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
